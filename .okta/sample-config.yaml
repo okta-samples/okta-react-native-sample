@@ -13,7 +13,7 @@ directions: |+2
       npm install
 
   Run instructions for iOS:
-    • cd ios && pod install && cd ..
+    • pod install --project-directory=ios
     • npm run ios
     - or -
     • Open ios/SecureApp.xcworkspace in Xcode or run "xed -b ios"
