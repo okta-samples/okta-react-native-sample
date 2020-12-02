@@ -15,6 +15,7 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2DAF1B972577588E00BCCB19 /* Polyfill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF1B962577588E00BCCB19 /* Polyfill.swift */; };
 		2DCD954D1E0B4F2C00145EB5 /* SecureAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SecureAppTests.m */; };
 		41D1F9D8FF6B50E2F51CB525 /* libPods-SecureApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B444EE0015166B828327035 /* libPods-SecureApp.a */; };
 		51A6FA745D31809151AFB901 /* libPods-SecureApp-SecureAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36125FC30456C61BA556826A /* libPods-SecureApp-SecureAppTests.a */; };
@@ -54,6 +55,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SecureApp/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SecureApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SecureApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SecureApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SecureApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DAF1B962577588E00BCCB19 /* Polyfill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polyfill.swift; sourceTree = "<group>"; };
 		314B8742B33913B4A031B55E /* Pods-SecureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureApp.release.xcconfig"; path = "Target Support Files/Pods-SecureApp/Pods-SecureApp.release.xcconfig"; sourceTree = "<group>"; };
 		36125FC30456C61BA556826A /* libPods-SecureApp-SecureAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecureApp-SecureAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4375352C35EA2C475ED8B586 /* libPods-SecureApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecureApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2DAF1B962577588E00BCCB19 /* Polyfill.swift */,
 				13B07FAE1A68108700A75B9A /* SecureApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* SecureAppTests */,
@@ -194,7 +197,6 @@
 				E3DD60CB1F0D6B3185A1B7E8 /* Pods-SecureApp-tvOSTests.debug.xcconfig */,
 				6F158F3136238902963E5EC5 /* Pods-SecureApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +296,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1220;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -568,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAF1B972577588E00BCCB19 /* Polyfill.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -610,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 657A311F45B3ABD5905AEB6C /* Pods-SecureApp-SecureAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -633,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC7D0B4BDA60FD2BBD51E13A /* Pods-SecureApp-SecureAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = SecureAppTests/Info.plist;
