@@ -1,6 +1,6 @@
 oauthClient:
   redirectUris:
-    - http://${CLI_OKTA_REDIRECT_SCHEME}:/callback
+    - ${CLI_OKTA_REVERSE_DOMAIN}:/callback
   applicationType: native
 
 directions: |+2
