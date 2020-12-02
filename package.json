@@ -1,0 +1,47 @@
+{
+    "name": "SecureApp",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "android": "react-native run-android",
+        "ios": "react-native run-ios",
+        "start": "react-native start",
+        "test": "jest",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "@okta/okta-react-native": "1.4.4",
+        "events": "3.2.0",
+        "react": "16.13.1",
+        "react-native": "0.63.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@babel/runtime": "^7.8.4",
+        "@oktadev/schematics": "file:../../oktadev-schematics-3.1.0.tgz",
+        "@react-native-community/eslint-config": "^1.1.0",
+        "babel-jest": "^25.1.0",
+        "enzyme": "3.11.0",
+        "enzyme-adapter-react-16": "1.15.5",
+        "enzyme-async-helpers": "0.9.1",
+        "eslint": "^6.5.1",
+        "jest": "^25.1.0",
+        "metro-react-native-babel-preset": "^0.59.0",
+        "react-dom": "17.0.1",
+        "react-test-renderer": "16.13.1"
+    },
+    "jest": {
+        "preset": "react-native",
+        "automock": false,
+        "transformIgnorePatterns": [
+            "node_modules/(?!@okta|react-native)"
+        ],
+        "testMatch": [
+            "**/tests/*.js?(x)",
+            "**/?(*.)(spec|test).js?(x)"
+        ],
+        "setupFiles": [
+            "./setupJest.js"
+        ]
+    }
+}
