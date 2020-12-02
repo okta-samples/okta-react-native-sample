@@ -8,7 +8,7 @@ directions: |+2
 
   Build this example using npm:
 
-    npm install
+      npm install
 
   Run instructions for iOS:
     • cd ios && pod install && cd ..
