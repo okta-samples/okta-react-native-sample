@@ -6,6 +6,10 @@ oauthClient:
 directions: |+2
   Okta configuration written to: auth.config.js
 
+  Build this example using npm:
+
+    npm install
+
   Run instructions for iOS:
     • cd ios && pod install && cd ..
     • npx react-native run-ios
