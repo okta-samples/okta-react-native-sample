@@ -1,9 +1,9 @@
 export default {
   oidc: {
-    clientId: '0oa5nak5fmUbfT3O3357',
-    redirectUri: 'com.okta.dev-133320:/callback',
-    endSessionRedirectUri: 'com.okta.dev-133320:/callback',
-    discoveryUri: 'https://dev-133320.okta.com/oauth2/default',
+    clientId: '${CLI_OKTA_CLIENT_ID}',
+    redirectUri: '${CLI_OKTA_REDIRECT_SCHEME}:/callback',
+    endSessionRedirectUri: '${CLI_OKTA_REDIRECT_SCHEME}:/callback',
+    discoveryUri: '${CLI_OKTA_ISSUER}',
     scopes: ['openid', 'profile', 'offline_access'],
     requireHardwareBackedKeyStore: false,
   },
