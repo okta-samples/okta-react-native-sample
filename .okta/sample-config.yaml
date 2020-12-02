@@ -1,6 +1,8 @@
 oauthClient:
   redirectUris:
     - ${CLI_OKTA_REVERSE_DOMAIN}:/callback
+  postLogoutRedirectUris:
+    - ${CLI_OKTA_REVERSE_DOMAIN}:/callback
   applicationType: native
 
 directions: |+2
