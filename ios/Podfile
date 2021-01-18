@@ -4,8 +4,8 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '11.0'
 
 target 'SecureApp' do
-  pod 'OktaOidc', '~> 3.0'
-  
+  pod 'OktaOidc'
+
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
