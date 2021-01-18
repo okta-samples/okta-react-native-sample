@@ -67,6 +67,15 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - OktaOidc (3.10.0):
+    - OktaOidc/AppAuth (= 3.10.0)
+    - OktaOidc/Okta (= 3.10.0)
+  - OktaOidc/AppAuth (3.10.0)
+  - OktaOidc/Okta (3.10.0):
+    - OktaOidc/AppAuth
+  - OktaSdkBridgeReactNative (1.6.0):
+    - OktaOidc (= 3.10.0)
+    - React
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
   - OpenSSL-Universal/Static (1.0.2.20)
@@ -325,6 +334,8 @@ DEPENDENCIES:
   - FlipperKit/SKIOSNetworkPlugin (~> 0.54.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - OktaOidc
+  - "OktaSdkBridgeReactNative (from `../node_modules/@okta/okta-react-native`)"
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -350,7 +361,7 @@ DEPENDENCIES:
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
@@ -363,6 +374,8 @@ SPEC REPOS:
     - FlipperKit
     - OpenSSL-Universal
     - YogaKit
+  trunk:
+    - OktaOidc
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -375,6 +388,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  OktaSdkBridgeReactNative:
+    :path: "../node_modules/@okta/okta-react-native"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -434,6 +449,8 @@ SPEC CHECKSUMS:
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
+  OktaOidc: 4519c0e6956713852ec472dfa7b54056fd466afb
+  OktaSdkBridgeReactNative: c0471ea9604efc2dec37911d7e9dae46ba734e63
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
   RCTRequired: 082f10cd3f905d6c124597fd1c14f6f2655ff65e
   RCTTypeSafety: 8c9c544ecbf20337d069e4ae7fd9a377aadf504b
@@ -458,6 +475,6 @@ SPEC CHECKSUMS:
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: a0b215dc033580b9b4caac0cb939d4cdd9582586
+PODFILE CHECKSUM: 8c6457230c1b1ace65c6bc69672251df74cf294a
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.10.1
