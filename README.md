@@ -13,6 +13,8 @@ Before running this sample, you will need the following:
 
 Grab and configure this project using `okta start react-native`.
 
+Follow the instructions printed to the console.
+
 ## Run the Example
 
 Launch an Android Emulator or iOS Simulator:
