@@ -22,7 +22,7 @@ PODS:
     - OpenSSL-Universal (= 1.1.180)
   - Flipper-Glog (0.3.6)
   - Flipper-PeerTalk (0.0.4)
-  - Flipper-RSocket (1.3.0):
+  - Flipper-RSocket (1.3.1):
     - Flipper-Folly (~> 2.5)
   - FlipperKit (0.75.1):
     - FlipperKit/Core (= 0.75.1)
@@ -64,7 +64,7 @@ PODS:
   - OktaOidc/AppAuth (3.10.2)
   - OktaOidc/Okta (3.10.2):
     - OktaOidc/AppAuth
-  - OktaSdkBridgeReactNative (1.11.1):
+  - OktaSdkBridgeReactNative (1.12.1):
     - OktaOidc (= 3.10.2)
     - React
   - OpenSSL-Universal (1.1.180)
@@ -468,12 +468,12 @@ SPEC CHECKSUMS:
   Flipper-Folly: 755929a4f851b2fb2c347d533a23f191b008554c
   Flipper-Glog: 1dfd6abf1e922806c52ceb8701a3599a79a200a6
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
-  Flipper-RSocket: 602921fee03edacf18f5d6f3d3594ba477f456e5
+  Flipper-RSocket: 127954abe8b162fcaf68d2134d34dc2bd7076154
   FlipperKit: 8a20b5c5fcf9436cac58551dc049867247f64b00
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OktaOidc: a3d7ddfb420566419e1f7a3f9cd535c35b9f4d36
-  OktaSdkBridgeReactNative: fe9d9cd3885a08e1ba77fa860068a40d1881144d
+  OktaSdkBridgeReactNative: 942b75e45e89843264b24601aee0849ad09942fa
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: 6d3e854f0e7260a648badd0d44fc364bc9da9728
