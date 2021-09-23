@@ -37,7 +37,8 @@ export default class Auth extends Component {
       endSessionRedirectUri: configFile.oidc.endSessionRedirectUri,
       discoveryUri: configFile.oidc.discoveryUri,
       scopes: configFile.oidc.scopes,
-      requireHardwareBackedKeyStore: configFile.oidc.requireHardwareBackedKeyStore,
+      requireHardwareBackedKeyStore:
+        configFile.oidc.requireHardwareBackedKeyStore,
     });
     this.checkAuthentication();
   }
@@ -50,7 +51,7 @@ export default class Auth extends Component {
   }
 
   async componentDidUpdate() {
-    this.checkAuthentication();
+    await this.checkAuthentication();
   }
 
   async checkAuthentication() {
@@ -61,11 +62,11 @@ export default class Auth extends Component {
   }
 
   async login() {
-    signIn();
+    await signIn();
   }
 
   async logout() {
-    signOut();
+    await signOut();
   }
 
   async getUserIdToken() {
@@ -91,7 +92,7 @@ export default class Auth extends Component {
           <View style={styles.button}>
             <Button
               onPress={async () => {
-                this.getUserIdToken();
+                await this.getUserIdToken();
               }}
               title="Get User From Id Token"
             />
@@ -99,7 +100,7 @@ export default class Auth extends Component {
           <View style={styles.button}>
             <Button
               onPress={async () => {
-                this.getMyUser();
+                await this.getMyUser();
               }}
               title="Get User From Request"
             />
@@ -119,14 +120,18 @@ export default class Auth extends Component {
                 <Button
                   style={styles.button}
                   testID="logoutButton"
-                  onPress={async () => { this.logout() }}
+                  onPress={async () => {
+                    await this.logout();
+                  }}
                   title="Logout"
                 />
               ) : (
                 <Button
                   style={styles.button}
                   testID="loginButton"
-                  onPress={async () => { this.login() }}
+                  onPress={async () => {
+                    await this.login();
+                  }}
                   title="Login"
                 />
               )}
@@ -158,5 +163,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-  }
+  },
 });
