@@ -11,7 +11,15 @@ Before running this sample, you will need the following:
 
 ## Get the Code
 
-Grab and configure this project using `okta start react-native`. You can also clone this project from GitHub and run `okta start` in it.
+Grab and configure this project using `okta start react-native`. 
+
+You can also clone this project from GitHub and run `okta start` in it.
+
+```
+git clone https://github.com/okta-samples/okta-react-native-sample.git
+cd okta-react-native-sample
+okta start
+```
 
 Follow the instructions printed to the console.
 
