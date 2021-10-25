@@ -28,7 +28,7 @@ global.fetch = jest
         json: () => {
           return {
             user: [{ foo: 'foo', bar: 'bar' }],
-          }
+          };
         },
         ok: true,
       });
@@ -40,7 +40,7 @@ global.fetch = jest
         json: () => {
           return {
             userinfo_endpoint: 'dummy_endpoint',
-          }
+          };
         },
         ok: true,
       });
@@ -72,7 +72,7 @@ describe('auth setup', () => {
 
   it('should render logout and get user info buttons if authenticated', () => {
     const wrapper = shallow(<Auth />);
-    wrapper.setState({authenticated: true});
+    wrapper.setState({ authenticated: true });
     const logoutButton = wrapper.find('Button').get(0);
     const getUserFromIdButton = wrapper.find('Button').get(1);
     const getUserButton = wrapper.find('Button').get(2);
@@ -83,7 +83,7 @@ describe('auth setup', () => {
 
   it('should not render login button if authenticated', () => {
     const wrapper = shallow(<Auth />);
-    wrapper.setState({authenticated: true});
+    wrapper.setState({ authenticated: true });
     const loginButton = wrapper.find('Button').get(0);
     expect(loginButton.props.title).not.toBe('Login');
   });
@@ -112,7 +112,7 @@ describe('authentication flow', () => {
 
   it('should detect when the user has signed out', async () => {
     const wrapper = shallow(<Auth />);
-    wrapper.setState({authenticated: true});
+    wrapper.setState({ authenticated: true });
     const logoutButton = wrapper.find('Button').get(0);
     await logoutButton.props.onPress();
     expect(logoutButton.props.title).toBe('Logout');
@@ -122,13 +122,17 @@ describe('authentication flow', () => {
   });
 
   it('should return user profile information from id token', async () => {
-    const mockGetIdToken = require('react-native').NativeModules.OktaSdkBridge.getIdToken;
+    const mockGetIdToken =
+      require('react-native').NativeModules.OktaSdkBridge.getIdToken;
     mockGetIdToken.mockImplementationOnce(() => {
       // id_token returns { a: 'b' }
-      return {'id_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhIjoiYiJ9.jiMyrsmD8AoHWeQgmxZ5yq8z0lXS67_QGs52AzC8Ru8'};
+      return {
+        id_token:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhIjoiYiJ9.jiMyrsmD8AoHWeQgmxZ5yq8z0lXS67_QGs52AzC8Ru8',
+      };
     });
     const wrapper = shallow(<Auth />);
-    wrapper.setState({authenticated: true});
+    wrapper.setState({ authenticated: true });
     const profileButton = wrapper.find('Button').get(1);
     await profileButton.props.onPress();
     await waitForState(wrapper, state => state.context !== null);
@@ -137,10 +141,11 @@ describe('authentication flow', () => {
   });
 
   it('should return user profile information from getUser method', async () => {
-    const mockGetUser = require('react-native').NativeModules.OktaSdkBridge.getUser;
-    mockGetUser.mockResolvedValue({ "name": "Mock User" });
+    const mockGetUser =
+      require('react-native').NativeModules.OktaSdkBridge.getUser;
+    mockGetUser.mockResolvedValue({ name: 'Mock User' });
     const wrapper = shallow(<Auth />);
-    wrapper.setState({authenticated: true});
+    wrapper.setState({ authenticated: true });
     const profileButton = wrapper.find('Button').get(2);
     await profileButton.props.onPress();
     await waitForState(wrapper, state => state.context !== null);

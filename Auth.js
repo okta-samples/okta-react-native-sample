@@ -1,7 +1,22 @@
 import React, { Component, Fragment } from 'react';
 
-import { SafeAreaView, ScrollView, Button, StyleSheet, Text, View } from 'react-native';
-import { createConfig, signIn, signOut, isAuthenticated, getUser, getUserFromIdToken, EventEmitter } from '@okta/okta-react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  Button,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import {
+  createConfig,
+  signIn,
+  signOut,
+  isAuthenticated,
+  getUser,
+  getUserFromIdToken,
+  EventEmitter,
+} from '@okta/okta-react-native';
 import configFile from './auth.config';
 
 export default class Auth extends Component {
@@ -17,11 +32,11 @@ export default class Auth extends Component {
   async componentDidMount() {
     let that = this;
     EventEmitter.addListener('signInSuccess', function (e: Event) {
-      that.setState({authenticated: true});
+      that.setState({ authenticated: true });
       that.setContext('Logged in!');
     });
     EventEmitter.addListener('signOutSuccess', function (e: Event) {
-      that.setState({authenticated: false});
+      that.setState({ authenticated: false });
       that.setContext('Logged out!');
     });
     EventEmitter.addListener('onError', function (e: Event) {
@@ -57,7 +72,7 @@ export default class Auth extends Component {
   async checkAuthentication() {
     const result = await isAuthenticated();
     if (result.authenticated !== this.state.authenticated) {
-      this.setState({authenticated: result.authenticated});
+      this.setState({ authenticated: result.authenticated });
     }
   }
 
