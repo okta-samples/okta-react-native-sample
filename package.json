@@ -13,7 +13,7 @@
     "@okta/okta-react-native": "2.3.0",
     "events": "3.3.0",
     "react": "17.0.2",
-    "react-native": "0.67.1"
+    "react-native": "0.69.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
