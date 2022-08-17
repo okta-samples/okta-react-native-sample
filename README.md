@@ -35,6 +35,8 @@ npm run android
 npm run ios
 ```
 
+**TIP**: If you have Android Studio install with CLI integration (Tools > Create Command-line Launcher), you can run `studio android` to view your project's code and run/debug from your IDE. 
+
 If you see a home page that prompts you to login, then things are working!  Clicking the **Login** button will redirect you to the Okta sign-in page.
 
 You can sign in with the same account that you created when signing up for your developer org, or you can use a known username and password from your Okta Directory.
