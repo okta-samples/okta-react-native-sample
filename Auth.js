@@ -154,7 +154,10 @@ export default class Auth extends Component {
           {this.renderButtons()}
           <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={styles.context}>
+            style={{
+              backgroundColor: 'lightskyblue',
+              borderRadius: 5,
+            }}>
             <Text>{this.state.context}</Text>
           </ScrollView>
         </SafeAreaView>
@@ -177,5 +180,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-  }
+  },
 });
