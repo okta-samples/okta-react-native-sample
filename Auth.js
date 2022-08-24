@@ -155,7 +155,7 @@ export default class Auth extends Component {
           {this.renderButtons()}
           <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={styles.context}>
+            style={styles.infoBox}>
             <Text>{this.state.context}</Text>
           </ScrollView>
         </SafeAreaView>
@@ -178,5 +178,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  infoBox: {
+    backgroundColor: 'lightskyblue',
+    borderRadius: 5,
   },
 });

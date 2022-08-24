@@ -74,6 +74,12 @@ exports[`auth setup should render correctly 1`] = `
   </View>
   <ScrollView
     contentInsetAdjustmentBehavior="automatic"
+    style={
+      Object {
+        "backgroundColor": "lightskyblue",
+        "borderRadius": 5,
+      }
+    }
   >
     <Text />
   </ScrollView>
