@@ -52,7 +52,8 @@ export default class Auth extends Component {
       endSessionRedirectUri: configFile.oidc.endSessionRedirectUri,
       discoveryUri: configFile.oidc.discoveryUri,
       scopes: configFile.oidc.scopes,
-      requireHardwareBackedKeyStore: configFile.oidc.requireHardwareBackedKeyStore,
+      requireHardwareBackedKeyStore:
+        configFile.oidc.requireHardwareBackedKeyStore,
     });
     this.checkAuthentication();
   }
@@ -154,10 +155,7 @@ export default class Auth extends Component {
           {this.renderButtons()}
           <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={{
-              backgroundColor: 'lightskyblue',
-              borderRadius: 5,
-            }}>
+            style={styles.infoBox}>
             <Text>{this.state.context}</Text>
           </ScrollView>
         </SafeAreaView>
@@ -180,5 +178,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  infoBox: {
+    backgroundColor: 'lightskyblue',
+    borderRadius: 5,
   },
 });
