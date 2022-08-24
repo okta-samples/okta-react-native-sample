@@ -52,8 +52,7 @@ export default class Auth extends Component {
       endSessionRedirectUri: configFile.oidc.endSessionRedirectUri,
       discoveryUri: configFile.oidc.discoveryUri,
       scopes: configFile.oidc.scopes,
-      requireHardwareBackedKeyStore:
-        configFile.oidc.requireHardwareBackedKeyStore,
+      requireHardwareBackedKeyStore: configFile.oidc.requireHardwareBackedKeyStore,
     });
     this.checkAuthentication();
   }
@@ -178,5 +177,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }
 });
