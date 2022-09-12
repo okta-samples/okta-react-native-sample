@@ -19,7 +19,7 @@
     "@babel/core": "^7.18.13",
     "@babel/runtime": "^7.18.9",
     "@react-native-community/eslint-config": "^3.1.0",
-    "babel-jest": "^29.0.2",
+    "babel-jest": "^29.0.3",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "enzyme-async-helpers": "0.9.1",
