@@ -29,7 +29,7 @@
     "metro-react-native-babel-preset": "^0.73.3",
     "prettier": "^2.7.1",
     "react-dom": "18.2.0",
-    "react-native-codegen": "^0.71.2",
+    "react-native-codegen": "^0.72.0",
     "react-test-renderer": "18.2.0"
   },
   "jest": {
